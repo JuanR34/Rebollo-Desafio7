@@ -1,0 +1,56 @@
+$primario: blue;
+$secundario: green;
+$terciario: red;
+$cuaternario: yellow;
+
+$colors: (
+    "primario": $primario,
+    "secundario":$secundario,
+    "terciario":$terciario,
+    "cuaternario":$cuaternario,
+);
+
+@debug map-get($colors,"primario");
+@debug map-get($colors, "secundario");
+
+
+$redes :(
+    twitter: #55acee,
+    instagram: #dd4b39,
+    facebook: #3b5999,
+);
+
+.botonTwitter {
+    color: map-get($map: $redes, $key: twitter);
+
+}
+
+.botonInstagram {
+    color: map-get($redes, instagram);
+    margin-right: 25px;
+}
+
+.botonFacebook {
+    color: map-get($redes, facebook);
+}
+
+
+$headings: (
+h1: 4em,
+h2: 3em,
+h3: 2em,
+h4: 1em,
+);
+
+$h1: map-get($headings, h1);
+
+$colores: (
+    primario:blue,
+    secundario: green
+);
+
+@each $headings, $size in $headings {
+    #{$headings} {
+        font-size: $size;
+    }
+}

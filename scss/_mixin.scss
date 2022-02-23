@@ -1,0 +1,24 @@
+@mixin fontSize ($tamanio,$peso,$color) {
+    font-size: $tamanio;
+    font-weight: $peso;
+    color: $color;
+
+}
+
+.letraChica {
+    @include fontSize(1rem,300,violet);
+
+}
+
+.letraMediana {
+    @include fontSize(30px,750,rgb(129, 18, 18) )
+}
+
+.letraGrande {
+    @include fontSize(45px,900,rgb(9, 9, 71) )
+}
+
+.letra {
+    @include fontSize(20px,250, none);
+    color: red;
+}

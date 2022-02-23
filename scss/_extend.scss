@@ -1,0 +1,35 @@
+.btn { 
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: gray;
+    color: white;
+  
+
+&:hover { background-color: gold; }
+}
+
+.botonColor {
+    @extend .btn;
+    background: red;
+    padding: 10px;
+}
+
+.botonBuscador {
+    @extend .btn;
+    background: greenyellow;
+    font-weight: 900;
+    font-size: 15px;
+    color: black;
+    &:hover {background-color: blueviolet;}
+}
+
+
+.botonContacto {
+    @extend .btn;
+    background: indianred;
+    font-weight: 900;
+    font-size: 15px;
+
+    &:hover {background-color: darkred;}
+}
